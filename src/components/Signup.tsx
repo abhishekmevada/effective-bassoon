@@ -157,11 +157,14 @@ export default function Signup() {
     setSelectedCategory(null);
 
     try {
-      const res = await fetch("http://localhost:5000/domain", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ domain }),
-      });
+      const res = await fetch(
+        "https://super-octo-tribble.onrender.com/domain",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ domain }),
+        },
+      );
 
       const json = await res.json();
 
