@@ -223,6 +223,8 @@ h3 {
 .hero-trust {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   font-size: 13px;
   color: var(--text-muted);

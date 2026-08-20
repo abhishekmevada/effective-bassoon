@@ -15,6 +15,7 @@
 }
 .domainHerosection {
   position: relative;
+  padding: 1rem;
   min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
@@ -23,11 +24,12 @@
   gap: 10px;
 }
 .domainHerosectionH1 {
-  font-size: 3rem;
+  font-size: clamp(32px, 5vw, 56px);
   color: var(--text-primary);
   text-align: center;
 }
 .domainHerosectionP {
+  font-size: clamp(12px, 2vw, 16px);
   text-align: center;
   color: var(--text-secondary);
 }
@@ -41,17 +43,23 @@
   border-radius: 15px;
   margin-top: 20px;
 }
+.domainformminBOx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .domainHerosectionFormIco {
   color: var(--text-muted);
 }
 .domainHerosectionFormInput {
-  padding: 10px 10px;
-  border-radius: 10px;
   font-size: 16px;
   border: none;
   outline: none;
   background-color: transparent;
   color: var(--text-primary);
+  width: 100%;
 }
 .domainHerosectionFormButton {
   padding: 10px 14px;
@@ -441,5 +449,14 @@
   .priorityissuesx {
     flex-direction: column;
     align-items: start;
+  }
+}
+@media (max-width: 421px) {
+  .domainHerosectionForm {
+    width: 100%;
+    flex-direction: column;
+  }
+  .domainHerosectionFormButton {
+    width: 100%;
   }
 }

@@ -120,17 +120,20 @@ export default function Home() {
             Actionable recommendations, not just raw data.
           </p>
           <form onSubmit={domainFun} className="domainHerosectionForm">
-            <Globe className="domainHerosectionFormIco" />
-            <input
-              type="text"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setDomain(e.target.value)
-              }
-              value={domain}
-              placeholder="example.com"
-              className="domainHerosectionFormInput"
-              required
-            />
+            <div className="domainformminBOx">
+              <Globe className="domainHerosectionFormIco" />
+              <input
+                type="text"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setDomain(e.target.value)
+                }
+                value={domain}
+                placeholder="example.com"
+                className="domainHerosectionFormInput"
+                required
+              />
+            </div>
+
             <button type="submit" className="domainHerosectionFormButton">
               Analyze
             </button>
