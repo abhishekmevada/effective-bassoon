@@ -1,0 +1,445 @@
+.xheader {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.xHeaderName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+.domainHerosection {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.domainHerosectionH1 {
+  font-size: 3rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+.domainHerosectionP {
+  text-align: center;
+  color: var(--text-secondary);
+}
+.domainHerosectionForm {
+  position: relative;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.domainHerosectionFormIco {
+  color: var(--text-muted);
+}
+.domainHerosectionFormInput {
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-primary);
+}
+.domainHerosectionFormButton {
+  padding: 10px 14px;
+  background-color: var(--accent);
+  font-size: 16px;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+.domainHerosectionFormButton:hover {
+  background-color: var(--accent-hover);
+}
+.domainLoadingSection {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.loadingSectionBox {
+  position: relative;
+  width: 30%;
+  height: 2px;
+  background-color: var(--bg-card);
+  overflow: hidden;
+}
+.loadingSectionLoader {
+  position: relative;
+  background-color: var(--accent-hover);
+  width: 30%;
+  height: 2px;
+  animation: load 2s linear infinite;
+}
+@keyframes load {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(250%);
+  }
+}
+.reportSection {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+}
+.reportSectionFirstContainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.reportSectionContainera {
+  position: relative;
+  padding: 10px 10px;
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+}
+.reportSectionContaineraBoxa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.reportSectionContaineraBoxadomainname {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+.reportSectionContaineraBoxaminbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reportSectionContaineraBoxaminboxp {
+  padding: 5px 5px;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  width: max-content;
+}
+.reportSectionContaineraBoxb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-primary);
+}
+.reportSectionContaineraBoxbp {
+  color: var(--text-secondary);
+}
+.reportSectionContinaerb {
+  position: relative;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 10px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.reportSectionContainerbScoreCon {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #1e2230;
+}
+.reportSectionContainerbScoreBox {
+  position: relative;
+  padding: 10px;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.reportSectionContainerbScoreBoxscore {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.reportSectionContainerbSummaryBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reportSectionContainerbSummaryBoxp {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: center;
+}
+.reportSectionSecondContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.reportSectionSecondContainerCardCon {
+  position: relative;
+  padding: 10px 10px;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.reportSectionSecondContainerCardCon:hover {
+  background-color: var(--bg-card-hover);
+  border-color: #2a2e3a;
+}
+.reportSectionSecondContainerCardCon.selected {
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.05);
+}
+.reportSectionSecondContainerCardConBoxa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.CardConBoxaName {
+  font-size: 18px;
+  font-weight: 600;
+}
+.CardConBoxaScore {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.reportSectionSecondContainerCardConBoxb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.CardConBoxbp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.CardConBoxbDota,
+.CardConBoxbDotb,
+.CardConBoxbDotc {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(12, 255, 12);
+  border-radius: 20px;
+}
+.CardConBoxbDotb {
+  background-color: yellow;
+}
+.CardConBoxbDotc {
+  background-color: red;
+}
+.reportSectionSecondContainerCardConProgressBar {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #1e2230;
+  border-radius: 5px;
+}
+.reportSectionSecondContainerCardConProgress {
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+.reportSectionThirdContainer {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reportSectionThirdContainerBox {
+  position: relative;
+  border-top: 1px solid var(--border-primary);
+}
+.reportSectionThirdContainerBox {
+  position: relative;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.reportSectionThirdContainerBoxminbox {
+  position: relative;
+}
+.techplabel {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+.reportSectionFourthContainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+.reportSectionPriorityissuesCon {
+  position: relative;
+  width: 50%;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+}
+.reportSectionPriorityissuesConheader {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.priorityissuesConBody {
+  position: relative;
+  padding: 10px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.priorityissuesConBody::-webkit-scrollbar {
+  width: 10px;
+}
+.priorityissuesConBody::-webkit-scrollbar-thumb {
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+}
+.priorityissuesConBodyBox {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.priorityissuesConBodyBox:hover {
+  background-color: var(--bg-primary);
+}
+.priorityissuesConBodyBoxminBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.priorityissuesx {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.priserverity {
+  padding: 5px;
+  border-radius: 5px;
+  width: max-content;
+}
+.badge-high {
+  background: var(--red-bg);
+  color: var(--red);
+}
+.badge-medium {
+  background: var(--yellow-bg);
+  color: var(--yellow);
+}
+.badge-low {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent);
+}
+.positiveCon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.positiveConp {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  transition: 1s;
+  border-radius: 10px;
+}
+.positiveConp:hover {
+  background-color: var(--bg-primary);
+}
+.positiveConspan {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 941px) {
+  .reportSectionContaineraBoxa {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 941px) {
+  .reportSectionFirstContainer {
+    flex-direction: column;
+  }
+  .reportSectionContainera,
+  .reportSectionContinaerb {
+    width: 100%;
+  }
+}
+@media (max-width: 903px) {
+  .reportSectionFourthContainer {
+    flex-direction: column;
+  }
+  .reportSectionPriorityissuesCon,
+  .reportSectionPriorityissuesCon {
+    width: 100%;
+  }
+}
+@media (max-width: 485px) {
+  .priorityissuesx {
+    flex-direction: column;
+    align-items: start;
+  }
+}
