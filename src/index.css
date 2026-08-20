@@ -546,6 +546,7 @@ h3 {
 .overview-primary {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 16px;
 }
