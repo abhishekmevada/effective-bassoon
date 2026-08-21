@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style/Home.css";
 import { Globe } from "lucide-react";
+import { generatePDF } from "../utils/generatePDF";
 
 interface CategoryScore {
   score: number;
@@ -68,7 +69,7 @@ export default function Home() {
   const domainFun = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
+    // https://super-octo-tribble.onrender.com
     try {
       const res = await fetch(
         "https://super-octo-tribble.onrender.com/domain",
@@ -88,7 +89,12 @@ export default function Home() {
 
       setReport(json.data);
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Something Wrong");
+      const msg = error instanceof Error ? error.message : "Something Wrong";
+      setError(
+        msg.includes("Failed to fetch")
+          ? "The analysis server timed out or crashed (Try again)."
+          : msg,
+      );
     } finally {
       setLoading(false);
     }
@@ -102,12 +108,33 @@ export default function Home() {
 
   const overallscore = report?.overall.score ?? 0;
   const color = getScoreColor(overallscore);
+
+  const newScan = () => {
+    setReport(null);
+    setLoading(false);
+    setError(null);
+  };
+
+  const handleDownloadPdf = () => {
+    if (!report) return;
+    generatePDF(report);
+  };
   return (
     <div>
       <header className="xheader">
         <p className="xHeaderName">
           Site<span>Audit</span>
         </p>
+        {report ? (
+          <div className="xHeaderBox">
+            <button className="xHeaderButtona" onClick={handleDownloadPdf}>
+              Download Report
+            </button>
+            <button className="xHeaderButton" onClick={newScan}>
+              New Scan
+            </button>
+          </div>
+        ) : null}
       </header>
       {!loading && !report && (
         <section className="domainHerosection">

@@ -13,6 +13,39 @@
   color: var(--text-primary);
   letter-spacing: -0.5px;
 }
+.xHeaderBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.xHeaderButtona {
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: var(--accent-glow);
+  border: 1px solid var(--border-primary);
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.xHeaderButtona:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-subtle);
+}
+.xHeaderButton {
+  padding: 10px 10px;
+  border-radius: 10px;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.xHeaderButton:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--border-subtle);
+}
 .domainHerosection {
   position: relative;
   padding: 1rem;

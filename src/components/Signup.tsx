@@ -171,8 +171,9 @@ export default function Signup() {
       }
 
       setReport(json.data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Connection failed");
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : "Connection failed";
+      setError(msg.includes("Failed to fetch") ? "The analysis server timed out or crashed (Try again)." : msg);
     } finally {
       setLoading(false);
     }
